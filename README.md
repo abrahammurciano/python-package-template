@@ -26,7 +26,7 @@ If you won't be using the commands below, just make a note of the values you wou
 Download the code and place it in a folder, then enter the folder. From now on all commands will be relative to this folder.
 
 ```sh
-git clone https://abrahammurciano/python-package-template.git python-$PACKAGE_NAME
+git clone https://github.com/abrahammurciano/python-package-template.git python-$PACKAGE_NAME
 cd python-$PACKAGE_NAME
 rm -rf .git
 ```
