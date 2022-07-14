@@ -85,13 +85,24 @@ git push -u origin main
 
 ## 7. Enable GitHub pages
 
-Go to `your repository` > `Settings` > `Pages`.
-
-TODO: finish this section
+- Go to `your repository` > `Settings` > `Pages`.
+- Under `source` select the branch `main`.
+- Then for the folder, instead of `/ (root)` choose `/docs`.
+- Click save.
 
 ## 8. Enforce tests on pull requests to main
 
-TODO: finish this section
+First you must trigger the flow once so GitHub is aware of its existance.
+
+- Go to `your repository` > `Actions` > `Tests` > `Run Workflow` > `Run Workflow`
+
+Now you can require the test flow to run.
+
+- Go to `your repository` > `Settings` > `Branches` > `Add branch protection rule`.
+- For the `Branch name pattern` type `main`.
+- Check `Require status checks to pass before merging`.
+- Type `test`, make sure it comes up in autocomplete, and click it.
+- Then click `Save changes`.
 
 ## 9. Delete these instructions
 
