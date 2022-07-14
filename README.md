@@ -104,7 +104,14 @@ Now you can require the test flow to run.
 - Type `test`, make sure it comes up in autocomplete, and click it.
 - Then click `Save changes`.
 
-## 9. Delete these instructions
+## 9. Some notes
+
+- If your minimum python version is less than 3.8, replace `importlib.metadata` with `importlib_metadata` in your `__init__.py` and add it as a dependency.
+```sh
+poetry add importlib_metadata
+```
+
+## 10. Delete these instructions
 
 Remove the text up to here from this file.
 
