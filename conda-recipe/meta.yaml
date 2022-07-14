@@ -1,0 +1,27 @@
+package:
+  name: <<PACKAGE_NAME>>
+  version: "{{ MY_PACKAGE_VERSION }}"
+
+source:
+  path: ".."
+
+requirements:
+  build:
+    - python >=<<MIN_PYTHON_VERSION>>
+    - pip
+    - poetry
+
+  run:
+    - python >=<<MIN_PYTHON_VERSION>>
+
+build:
+  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
+  noarch: python
+
+about:
+  home: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>
+  license: GPLv3
+  summary: "<<PACKAGE_DESCRIPTION>>"
+  description: "<<PACKAGE_DESCRIPTION>>"
+  dev_url: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>
+  doc_url: https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>
