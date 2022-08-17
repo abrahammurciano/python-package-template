@@ -1,6 +1,6 @@
 package:
   name: <<PACKAGE_NAME>>
-  version: "{{ MY_PACKAGE_VERSION }}"
+  version: "{{ POETRY_VERSION }}"
 
 source:
   path: ".."
@@ -13,6 +13,7 @@ requirements:
 
   run:
     - python >=<<MIN_PYTHON_VERSION>>
+    - importlib-metadata >=4.11
 
 build:
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
