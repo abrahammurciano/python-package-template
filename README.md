@@ -146,6 +146,6 @@ $ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE_NAME>>
 
 [![PyPI - <<PACKAGE_NAME>>](https://img.shields.io/badge/PyPI-<<PACKAGE_NAME>>-006DAD?style=for-the-badge&logo=PyPI&logoColor=%23FFD242)](https://pypi.org/project/<<PACKAGE_NAME>>/)
 
-[![Anaconda - <<PACKAGE_NAME>>](https://img.shields.io/badge/Anaconda-<<PACKAGE__NAME>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANAONDA_USERNAME>>/<<PACKAGE_NAME>>)
+[![Anaconda - <<PACKAGE_NAME>>](https://img.shields.io/badge/Anaconda-<<PACKAGE_NAME>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANACONDA_USERNAME>>/<<PACKAGE_NAME>>)
 
 ## Usage
