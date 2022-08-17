@@ -59,12 +59,19 @@ mv '<<MODULE_NAME>>' $MODULE_NAME
 - Enter the value of `$PACKAGE_DESCRIPTION` as the description.
 - Don't initialize the repository with a readme, a .gitignore, a license, or any other files.
 
-## 5. Give GitHub access to your PyPI and Anaconda accounts
+## 5. Store the necessary credentials
 
 - Create a [PyPI](https://pypi.org/account/register/) account if you don't have one.
 - Create an [Anaconda](https://anaconda.org/account/register) account if you don't have one.
+- Create a GitHub personal access token.
+	- Go to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`.
+	- Name it `GitHub Actions for $PACKAGE_NAME`.
+	- Select `repo` as the `Scopes` field.
+	- Click `Generate token`.
+	- Copy it for the next step.
 - Go to `your repository` > `Settings` > `Secrets` > `Actions`.
-- Create four new repository secrets:
+- Create five new repository secrets:
+	- `PERSONAL_GH_TOKEN`
 	- `PYPI_USERNAME`
 	- `PYPI_PASSWORD`
 	- `ANACONDA_USERNAME`
@@ -90,11 +97,12 @@ git push -u origin main
 - Then for the folder, instead of `/ (root)` choose `/docs`.
 - Click save.
 
-## 8. Enforce tests on pull requests to main
+## 8. Enforce CI on pull requests to main
 
 First you must trigger the flow once so GitHub is aware of its existance.
 
 - Go to `your repository` > `Actions` > `Tests` > `Run Workflow` > `Run Workflow`
+- Go to `your repository` > `Actions` > `Docs & Format` > `Run Workflow` > `Run Workflow`
 
 Now you can require the test flow to run.
 
@@ -102,6 +110,7 @@ Now you can require the test flow to run.
 - For the `Branch name pattern` type `main`.
 - Check `Require status checks to pass before merging`.
 - Type `test`, make sure it comes up in autocomplete, and click it.
+- Type `docs_and_format`, make sure it comes up in autocomplete, and click it.
 - Then click `Save changes`.
 
 ## 9. Some notes
@@ -128,8 +137,14 @@ $ pip install <<PACKAGE_NAME>>
 $ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE_NAME>>
 ```
 
-## Documentation
+## Links
 
-The full documentation is available [here](https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>).
+[![Documentation](https://img.shields.io/badge/Documentation-C61C3E?style=for-the-badge&logo=Read+the+Docs&logoColor=%23FFFFFF)](https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>)
+
+[![Source Code - GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF)](https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>.git)
+
+[![PyPI - <<PACKAGE_NAME>>](https://img.shields.io/badge/PyPI-<<PACKAGE_NAME>>-006DAD?style=for-the-badge&logo=PyPI&logoColor=%23FFD242)](https://pypi.org/project/<<PACKAGE_NAME>>/)
+
+[![Anaconda - <<PACKAGE_NAME>>](https://img.shields.io/badge/Anaconda-<<PACKAGE__NAME>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANAONDA_USERNAME>>/<<PACKAGE_NAME>>)
 
 ## Usage
