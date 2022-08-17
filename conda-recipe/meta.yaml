@@ -13,7 +13,6 @@ requirements:
 
   run:
     - python >=<<MIN_PYTHON_VERSION>>
-    - importlib-metadata >=4.11
 
 build:
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
