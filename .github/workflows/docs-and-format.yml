@@ -25,7 +25,7 @@ jobs:
 
       # Generate documentation
       - name: Generate Documentation
-        run: poetry run pdoc3 <<MODULE_NAME>> -f --html -o docs --config show_source_code=False
+        run: poetry run pdoc3 <<MODULE>> -f --html -o docs --config show_source_code=False
       - name: Commit Documentation
         run: |
           git add docs && git commit -am 'Update documentation' || true

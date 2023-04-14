@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "<<PACKAGE_NAME>>"
+name = "<<PACKAGE>>"
 # Version is overwritten at build time by CI based on git tag
 version = "0"
 description = "<<PACKAGE_DESCRIPTION>>"
 authors = ["<<YOUR_NAME>> <<<YOUR_EMAIL>>>"]
 license = "GPLv3"
 readme = "README.md"
-repository = "https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>"
-documentation = "https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>"
+repository = "https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>"
+documentation = "https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>/<<PACKAGE>>"
 keywords = []
 
 [tool.poetry.dependencies]

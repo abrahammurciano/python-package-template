@@ -9,8 +9,8 @@ In order to use this template you must perform the following steps. In each step
 In the following instructions, commands will make reference to several variables. You can set these variables now so you can run all subsequent commands without having to edit them. (Replace `...` with actual values.)
 
 ```sh
-PACKAGE_NAME="..." # The name of your package. Use kebab-case.
-MODULE_NAME=$(echo $PACKAGE_NAME | tr - _) # The name of your module. Should be the package name in snake_case.
+PACKAGE="..." # The name of your package. Use kebab-case.
+MODULE=$(echo $PACKAGE | tr - _) # The name of your module. Should be the package name in snake_case.
 PACKAGE_DESCRIPTION="..." # A short description of your package
 YOUR_NAME="..." # Your name. Use spaces and start each word with an uppercase letter
 YOUR_EMAIL="..." # Your email address
@@ -26,8 +26,8 @@ If you won't be using the commands below, just make a note of the values you wou
 Download the code and place it in a folder, then enter the folder. From now on all commands will be relative to this folder.
 
 ```sh
-git clone https://github.com/abrahammurciano/python-package-template.git python-$PACKAGE_NAME
-cd python-$PACKAGE_NAME
+git clone https://github.com/abrahammurciano/python-package-template.git python-$PACKAGE
+cd python-$PACKAGE
 rm -rf .git
 ```
 
@@ -36,8 +36,8 @@ rm -rf .git
 There are several placeholders that you must replace with values from step 1. These match this regular expression: `<<[A-Z_]+>>`. You can use your IDE to find all such placeholders and replace them, or you can use the following commands to do the same.
 
 ```sh
-find ./ -type f -exec sed -i -e "s/<<PACKAGE_NAME>>/$PACKAGE_NAME/g" {} \;
-find ./ -type f -exec sed -i -e "s/<<MODULE_NAME>>/$MODULE_NAME/g" {} \;
+find ./ -type f -exec sed -i -e "s/<<PACKAGE>>/$PACKAGE/g" {} \;
+find ./ -type f -exec sed -i -e "s/<<MODULE>>/$MODULE/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<PACKAGE_DESCRIPTION>>/$PACKAGE_DESCRIPTION/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<YOUR_NAME>>/$YOUR_NAME/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<YOUR_EMAIL>>/$YOUR_EMAIL/g" {} \;
@@ -49,13 +49,13 @@ find ./ -type f -exec sed -i -e "s/<<MIN_PYTHON_VERSION>>/$MIN_PYTHON_VERSION/g"
 Also don't forget to replace any occurences of a placeholder in folder and file names.
 
 ```sh
-mv '<<MODULE_NAME>>' $MODULE_NAME
+mv '<<MODULE>>' $MODULE
 ```
 
 ## 4. Create a GitHub repository
 
 - Click [here](https://github.com/new) to create a new GitHub repository.
-- Name it `python-$PACKAGE_NAME`.
+- Name it `python-$PACKAGE`.
 - Enter the value of `$PACKAGE_DESCRIPTION` as the description.
 - Don't initialize the repository with a readme, a .gitignore, a license, or any other files.
 
@@ -67,7 +67,7 @@ mv '<<MODULE_NAME>>' $MODULE_NAME
 
 ### Create a GitHub personal access token
 - Go to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`.
-- Name it `GitHub Actions for $PACKAGE_NAME`.
+- Name it `GitHub Actions for $PACKAGE`.
 - Set it to not expire.
 - Select `repo` as the `Scopes` field.
 - Click `Generate token`.
@@ -95,7 +95,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/$GITHUB_USERNAME/python-$PACKAGE_NAME.git
+git remote add origin https://github.com/$GITHUB_USERNAME/python-$PACKAGE.git
 git push -u origin main
 ```
 
@@ -133,27 +133,27 @@ poetry add importlib_metadata
 
 Remove the text up to here from this file.
 
-# <<PACKAGE_NAME>>
+# <<PACKAGE>>
 <<PACKAGE_DESCRIPTION>>
 
 ## Installation
 
 You can install this package with pip or conda.
 ```sh
-$ pip install <<PACKAGE_NAME>>
+$ pip install <<PACKAGE>>
 ```
 ```sh
-$ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE_NAME>>
+$ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE>>
 ```
 
 ## Links
 
-[![Documentation](https://img.shields.io/badge/Documentation-C61C3E?style=for-the-badge&logo=Read+the+Docs&logoColor=%23FFFFFF)](https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>)
+[![Documentation](https://img.shields.io/badge/Documentation-C61C3E?style=for-the-badge&logo=Read+the+Docs&logoColor=%23FFFFFF)](https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>)
 
-[![Source Code - GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF)](https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>.git)
+[![Source Code - GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF)](https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>.git)
 
-[![PyPI - <<PACKAGE_NAME>>](https://img.shields.io/badge/PyPI-<<PACKAGE_NAME>>-006DAD?style=for-the-badge&logo=PyPI&logoColor=%23FFD242)](https://pypi.org/project/<<PACKAGE_NAME>>/)
+[![PyPI - <<PACKAGE>>](https://img.shields.io/badge/PyPI-<<MODULE>>-006DAD?style=for-the-badge&logo=PyPI&logoColor=%23FFD242)](https://pypi.org/project/<<PACKAGE>>/)
 
-[![Anaconda - <<PACKAGE_NAME>>](https://img.shields.io/badge/Anaconda-<<PACKAGE_NAME>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANACONDA_USERNAME>>/<<PACKAGE_NAME>>)
+[![Anaconda - <<PACKAGE>>](https://img.shields.io/badge/Anaconda-<<MODULE>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANACONDA_USERNAME>>/<<PACKAGE>>)
 
 ## Usage

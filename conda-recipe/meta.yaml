@@ -1,5 +1,5 @@
 package:
-  name: <<PACKAGE_NAME>>
+  name: <<PACKAGE>>
   version: "{{ POETRY_VERSION }}"
 
 source:
@@ -19,9 +19,9 @@ build:
   noarch: python
 
 about:
-  home: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>
+  home: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>
   license: GPLv3
   summary: "<<PACKAGE_DESCRIPTION>>"
   description: "<<PACKAGE_DESCRIPTION>>"
-  dev_url: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE_NAME>>
-  doc_url: https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE_NAME>>/<<PACKAGE_NAME>>
+  dev_url: https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>
+  doc_url: https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>/<<PACKAGE>>
