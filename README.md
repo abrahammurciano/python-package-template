@@ -61,18 +61,26 @@ mv '<<MODULE_NAME>>' $MODULE_NAME
 
 ## 5. Store the necessary credentials
 
+### Create the necessary accounts
 - Create a [PyPI](https://pypi.org/account/register/) account if you don't have one.
 - Create an [Anaconda](https://anaconda.org/account/register) account if you don't have one.
-- Create a GitHub personal access token.
-	- Go to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`.
-	- Name it `GitHub Actions for $PACKAGE_NAME`.
-	- Set it to not expire.
-	- Select `repo` as the `Scopes` field.
-	- Click `Generate token`.
-	- Copy it for the next step.
+
+### Create a GitHub personal access token
+- Go to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`.
+- Name it `GitHub Actions for $PACKAGE_NAME`.
+- Set it to not expire.
+- Select `repo` as the `Scopes` field.
+- Click `Generate token`.
+- Copy it for the next step.
+
+### Grant write access to GitHub Actions
+- Go to `your repository` > `Settings` > `Actions` > `General`.
+- Under `Workflow permissions` select `Read and write permissions`.
+- Click `Save`.
+
+### Create the necessary secrets
 - Go to `your repository` > `Settings` > `Secrets` > `Actions`.
-- Create five new repository secrets:
-	- `PERSONAL_GH_TOKEN`
+- Create four new repository secrets:
 	- `PYPI_USERNAME`
 	- `PYPI_PASSWORD`
 	- `ANACONDA_USERNAME`
