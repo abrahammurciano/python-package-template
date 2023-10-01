@@ -75,7 +75,7 @@ You can generate one [here](https://pypi.org/manage/account/). Name it `$PACKAGE
 
 ### Create the necessary secrets
 - Go to `your repository` > `Settings` > `Secrets` > `Actions`.
-- Create five new repository secrets:
+- Create these new repository secrets:
 	- `PERSONAL_GH_TOKEN`
 	- `PYPI_TOKEN`
 
