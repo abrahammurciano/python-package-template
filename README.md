@@ -49,7 +49,7 @@ find ./ -type f -exec sed -i -e "s/<<MIN_PYTHON_VERSION>>/$MIN_PYTHON_VERSION/g"
 Also don't forget to replace any occurences of a placeholder in folder and file names.
 
 ```sh
-mv '<<MODULE>>' $MODULE
+mv '<<MODULE_NAME>>' $MODULE
 ```
 
 ## 4. Create a GitHub repository
