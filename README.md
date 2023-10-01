@@ -73,18 +73,19 @@ mv '<<MODULE_NAME>>' $MODULE
 - Click `Generate token`.
 - Copy it for the next step.
 
-### Grant write access to GitHub Actions
-- Go to `your repository` > `Settings` > `Actions` > `General`.
-- Under `Workflow permissions` select `Read and write permissions`.
-- Click `Save`.
-
 ### Create the necessary secrets
 - Go to `your repository` > `Settings` > `Secrets` > `Actions`.
-- Create four new repository secrets:
+- Create five new repository secrets:
+	- `PERSONAL_GH_TOKEN`
 	- `PYPI_USERNAME`
 	- `PYPI_PASSWORD`
 	- `ANACONDA_USERNAME`
 	- `ANACONDA_PASSWORD`
+
+### Grant write access to GitHub Actions
+- Go to `your repository` > `Settings` > `Actions` > `General`.
+- Under `Workflow permissions` select `Read and write permissions`.
+- Click `Save`.
 
 ## 6. Push your code to GitHub
 
