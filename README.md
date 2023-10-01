@@ -15,7 +15,6 @@ PACKAGE_DESCRIPTION="..." # A short description of your package
 YOUR_NAME="..." # Your name. Use spaces and start each word with an uppercase letter
 YOUR_EMAIL="..." # Your email address
 GITHUB_USERNAME="..." # Your GitHub username
-ANACONDA_USERNAME="..." # Your Anaconda username
 MIN_PYTHON_VERSION="..." # The minimum version of Python required to use this package
 ```
 
@@ -42,7 +41,6 @@ find ./ -type f -exec sed -i -e "s/<<PACKAGE_DESCRIPTION>>/$PACKAGE_DESCRIPTION/
 find ./ -type f -exec sed -i -e "s/<<YOUR_NAME>>/$YOUR_NAME/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<YOUR_EMAIL>>/$YOUR_EMAIL/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<GITHUB_USERNAME>>/$GITHUB_USERNAME/g" {} \;
-find ./ -type f -exec sed -i -e "s/<<ANACONDA_USERNAME>>/$ANACONDA_USERNAME/g" {} \;
 find ./ -type f -exec sed -i -e "s/<<MIN_PYTHON_VERSION>>/$MIN_PYTHON_VERSION/g" {} \;
 ```
 
@@ -63,7 +61,6 @@ mv '<<MODULE_NAME>>' $MODULE
 
 ### Create the necessary accounts
 - Create a [PyPI](https://pypi.org/account/register/) account if you don't have one.
-- Create an [Anaconda](https://anaconda.org/account/register) account if you don't have one.
 
 ### Create a GitHub personal access token
 - Go to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`.
@@ -73,14 +70,14 @@ mv '<<MODULE_NAME>>' $MODULE
 - Click `Generate token`.
 - Copy it for the next step.
 
+### Create a PyPI token
+You can generate one [here](https://pypi.org/manage/account/). Name it `$PACKAGE`.
+
 ### Create the necessary secrets
 - Go to `your repository` > `Settings` > `Secrets` > `Actions`.
 - Create five new repository secrets:
 	- `PERSONAL_GH_TOKEN`
-	- `PYPI_USERNAME`
-	- `PYPI_PASSWORD`
-	- `ANACONDA_USERNAME`
-	- `ANACONDA_PASSWORD`
+	- `PYPI_TOKEN`
 
 ### Grant write access to GitHub Actions
 - Go to `your repository` > `Settings` > `Actions` > `General`.
@@ -139,12 +136,9 @@ Remove the text up to here from this file.
 
 ## Installation
 
-You can install this package with pip or conda.
+You can install this package with pip.
 ```sh
 $ pip install <<PACKAGE>>
-```
-```sh
-$ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE>>
 ```
 
 ## Links
@@ -154,7 +148,5 @@ $ conda install -c <<ANACONDA_USERNAME>> <<PACKAGE>>
 [![Source Code - GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF)](https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>.git)
 
 [![PyPI - <<PACKAGE>>](https://img.shields.io/badge/PyPI-<<MODULE>>-006DAD?style=for-the-badge&logo=PyPI&logoColor=%23FFD242)](https://pypi.org/project/<<PACKAGE>>/)
-
-[![Anaconda - <<PACKAGE>>](https://img.shields.io/badge/Anaconda-<<MODULE>>-44A833?style=for-the-badge&logo=Anaconda&logoColor=%23FFFFFF)](https://anaconda.org/<<ANACONDA_USERNAME>>/<<PACKAGE>>)
 
 ## Usage
