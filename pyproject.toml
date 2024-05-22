@@ -11,7 +11,7 @@ documentation = "https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>/<<PACK
 keywords = []
 
 [tool.poetry.dependencies]
-python = "^<<MIN_PYTHON_VERSION>>"
+python = ">=<<MIN_PYTHON_VERSION>>"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
