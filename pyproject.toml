@@ -13,7 +13,7 @@ keywords = []
 [tool.poetry.dependencies]
 python = ">=<<MIN_PYTHON_VERSION>>"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "*"
 black = "*"
 pdoc3 = "*"
