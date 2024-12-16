@@ -1,29 +1,24 @@
-[tool.poetry]
+[project]
 name = "<<PACKAGE>>"
 # Version is overwritten at build time by CI based on git tag
-version = "0"
+version = "0+dev"
 description = "<<PACKAGE_DESCRIPTION>>"
-authors = ["<<YOUR_NAME>> <<<YOUR_EMAIL>>>"]
-license = "GPLv3"
+authors = [{ name = "<<YOUR_NAME>>", email = "<<<YOUR_EMAIL>>>" }]
+license = "GPL-3.0"
 readme = "README.md"
-repository = "https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>"
-documentation = "https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>/<<PACKAGE>>"
+requires-python = ">=<<MIN_PYTHON_VERSION>>"
 keywords = []
 
-[tool.poetry.dependencies]
-python = ">=<<MIN_PYTHON_VERSION>>"
+[project.urls]
+repository = "https://github.com/<<GITHUB_USERNAME>>/python-<<PACKAGE>>"
+documentation = "https://<<GITHUB_USERNAME>>.github.io/python-<<PACKAGE>>/<<PACKAGE>>"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "*"
-black = "*"
-pdoc3 = "*"
-toml = "*"
-types-toml = "*"
-mypy = "*"
+[dependency-groups]
+dev = ["black", "pytest", "pdoc3", "mypy"]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
 
 [tool.mypy]
 exclude = [".venv", "venv"]
