@@ -23,4 +23,4 @@ jobs:
       - name: Check Build
         run: pip install dist/*.whl
       - name: Publish Pip Package
-        run: poetry publish -u __token__ -p ${{ secrets.PYPI_TOKEN }}
+        run: uv publish -u __token__ -p ${{ secrets.PYPI_TOKEN }}
