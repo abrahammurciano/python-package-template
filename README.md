@@ -124,7 +124,7 @@ Now you can require the test flow to run.
 
 - If your minimum python version is less than 3.8, replace `importlib.metadata` with `importlib_metadata` in your `__init__.py` and add it as a dependency.
 ```sh
-poetry add importlib_metadata
+uv add importlib_metadata
 ```
 
 ## 10. Delete these instructions
