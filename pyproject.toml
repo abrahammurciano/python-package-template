@@ -3,7 +3,7 @@ name = "<<PACKAGE>>"
 # Version is overwritten at build time by CI based on git tag
 version = "0+dev"
 description = "<<PACKAGE_DESCRIPTION>>"
-authors = [{ name = "<<YOUR_NAME>>", email = "<<<YOUR_EMAIL>>>" }]
+authors = [{ name = "<<YOUR_NAME>>", email = "<<YOUR_EMAIL>>" }]
 license = "GPL-3.0"
 readme = "README.md"
 requires-python = ">=<<MIN_PYTHON_VERSION>>"
